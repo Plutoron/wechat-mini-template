@@ -1,0 +1,16 @@
+<view>
+  <view><text>common:</text>common.wxss & flex.wxss & io-content.js</view>
+  <view>io-content.js 封装了原生wx.request</view>
+  <view><text>config:</text>配置项 一些参数</view>
+  <view><text>libs:</text>用的的其他库 runtime.js 为了用async 和 await</view>
+  <view><text></text></view>
+  <view>每个page目录下新增 io.js 管理页面请求。</view>
+  <view>
+    在[页面名].js 头部添加使用
+    <view>
+    const app = getApp()
+    const regeneratorRuntime = require(`${app.RUNTIME}`)
+    import io from 'io.js'
+    </view> 
+  </view>
+</view>
