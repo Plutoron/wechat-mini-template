@@ -1,9 +1,0 @@
-<!--pages/choose-img/choose-img.wxml-->
-<view class='FBH FBJS FBW'>
-  <image wx:for='{{imgUrl}}' wx:key='{{key}}' class='img-item ml10' bindlongpress='longtap' src='{{item}}' data-index='{{index}}'></image>
-  <view wx:if='{{imgUrl.length < 5}}' class='add-btn fs24 ml10 FBV FBAC FBJC' bindtap='choose'>
-    <view class="plus"></view>
-    <text class="mt8">上传</text>
-  </view>
-</view>
-

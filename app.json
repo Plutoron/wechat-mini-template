@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/choose-img/choose-img",
     "pages/index/index",
     "pages/logs/logs",
     "pages/intro/intro"
@@ -14,12 +13,8 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/choose-img/choose-img",
-        "text": "选择图片"
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "首页"
+        "pagePath": "pages/intro/intro",
+        "text": "欢迎页"
       },
       {
         "pagePath": "pages/logs/logs",
