@@ -19,7 +19,7 @@ Page({
     }
   },
   onLoad: function (options) {
-
+    this.search()
   },
   onReady: function () {
 
