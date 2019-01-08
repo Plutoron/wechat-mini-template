@@ -8,8 +8,8 @@ Page({
   },
   search: async function() {
     try {
-      const res2 = await io.search({ wd: '1111' })
-      console.log(res2)
+      const res = await io.search({ wd: '我是帅哥' })
+      console.log(res)
     } catch (e) {
       wx.showToast({
         title: e.errMsg,

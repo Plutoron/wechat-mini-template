@@ -1,30 +1,21 @@
 import regeneratorRuntime from '../libs/runtime.js'
-import {prefix, testPrefix, dev} from '../config/config.js'
+import {prefix, mode, https} from '../config/config.js'
 
-const ioContent = async (url, params = {}) => {
-  Object.assign(params, {
-    token: wx.getStorageSync('token')
-  })
+const ioContent = async ({url, method = 'GET', data = {}}) => {
   // 所有的请求，header默认携带token
   const header = params.header || {
     'Content-Type': 'application/json',
-    'token': params.token || ''
+    token: wx.getStorageSync('token') || ''
   }
-  const data = params.data || {}
-  const method = params.method || 'GET'
   
   const res = await new Promise((resolve, reject) => {
     wx.request({
-      url: `http://${dev ? testPrefix : prefix}${url}`,
+      url: `${https ? 'https' : 'http'}://${prefix[mode]}/${url}`,
       method,
       data,
       header,
       success: (res) => {
-        if (res && res.statusCode == 8200) {
-          resolve(res.data || res.result)
-        } else {
-          reject(res)
-        }
+        resolve(res.data)
       },
       fail: (err) => {
         reject(err)

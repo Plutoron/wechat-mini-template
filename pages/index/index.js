@@ -10,18 +10,16 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   search: async () => {
-    console.log('1')
     try {
-      const res2 = await io.search({ wd: '1111' })
-      console.log(res2)
+      const res = await io.search({ 
+        wd: '1111',
+      })
+      console.log(res)
     } catch (e) { 
-      console.log(e)
       wx.showToast({
         title: e.errMsg,
       })
     }
-
-    console.log('2')
   },
   //事件处理函数
   bindViewTap: function() {
