@@ -7,7 +7,7 @@
 > font-size/padding/margin/omit
 
 #### flex.wxss 
-> flex布局常用的class名
+> flex布局常用的class名
 
 #### io-context
 > 封装的wx.request 支持 async/await
