@@ -1,8 +1,10 @@
-import {ioContent} from '../../common/io-context.js'
+import {
+  ioContent
+} from '../../common/io-context.js'
 
 const io = {
   search: data => ioContent({
-    url: 's', 
+    url: 's',
     method: 'GET',
     data,
   }),

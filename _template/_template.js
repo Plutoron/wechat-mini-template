@@ -6,9 +6,9 @@ Page({
   data: {
 
   },
-  search: async function() {
+  search: async function () {
     try {
-      const res = await io.search({ 
+      const res = await io.search({
         wd: '我是帅哥',
       })
       console.log(res)

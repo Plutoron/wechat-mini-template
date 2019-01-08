@@ -4,7 +4,7 @@ const config = {
   ROOT: '../../',
   CONFIG: '../../config/config.js',
   RUNTIME: '../../libs/runtime.js',
-  mode: 'dev',  // dev / test / pro
+  mode: 'dev', // dev / test / pro
   prefix: {
     dev: 'dev.www.baidu.com',
     test: 'test.www.baidu.com',

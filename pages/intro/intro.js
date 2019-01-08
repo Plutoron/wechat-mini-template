@@ -8,8 +8,8 @@ Page({
   },
   search: async () => {
     try {
-      const res = await io.search({ 
-        wd: '1111', 
+      const res = await io.search({
+        wd: '1111',
       })
       console.log(res)
     } catch (e) {

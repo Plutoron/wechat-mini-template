@@ -11,8 +11,7 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/intro/intro",
         "text": "欢迎页"
       },

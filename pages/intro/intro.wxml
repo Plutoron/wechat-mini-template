@@ -9,9 +9,9 @@
   <view>
     在[页面名].js 头部添加使用
     <view>
-    const app = getApp()
-    const regeneratorRuntime = require(`${app.RUNTIME}`)
-    import io from 'io.js'
-    </view> 
+      const app = getApp()
+      const regeneratorRuntime = require(`${app.RUNTIME}`)
+      import io from 'io.js'
+    </view>
   </view>
 </view>
