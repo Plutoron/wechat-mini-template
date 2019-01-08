@@ -4,7 +4,7 @@ const io = {
   search: data => ioContent({
     url: 's', 
     method: 'GET',
-    data
+    data,
   }),
 }
 

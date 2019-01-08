@@ -9,7 +9,7 @@ Page({
   search: async () => {
     try {
       const res = await io.search({ 
-        wd: '1111' 
+        wd: '1111', 
       })
       console.log(res)
     } catch (e) {
