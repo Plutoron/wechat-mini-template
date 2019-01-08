@@ -3,9 +3,10 @@ import {prefix, mode, https} from '../config/config.js'
 
 const ioContent = async ({url, method = 'GET', data = {}}) => {
   // 所有的请求，header默认携带token
-  const header = params.header || {
+  const header = {
     'Content-Type': 'application/json',
-    token: wx.getStorageSync('token') || ''
+    token: wx.getStorageSync('token') || '',
+    ...data.header,
   }
   
   const res = await new Promise((resolve, reject) => {
