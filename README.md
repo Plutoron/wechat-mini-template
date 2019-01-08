@@ -1,18 +1,20 @@
-# mini-template
+## mini-template
 > 初始化小程序模版
 
 ### common
- ```
-common.wxss -- font-size/padding/margin/omit
 
-flex.wxss -- flex
+#### common.wxss 
+> font-size/padding/margin/omit
 
-io-context -- 封装的wx.request 支持 async/await
-```
+#### flex.wxss 
+> flex布局常用的class名
+
+#### io-context
+> 封装的wx.request 支持 async/await
 
 ### config
 
-> config.js -- 一些配置变量的集合
+config.js -- 一些配置变量的集合
 
 > 通过 mode 和 prefix 配置不同环境
 
