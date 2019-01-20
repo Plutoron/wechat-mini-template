@@ -11,7 +11,8 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/intro/intro",
         "text": "欢迎页"
       },
@@ -26,5 +27,8 @@
     "connectSocket": 20000,
     "uploadFile": 20000,
     "downloadFile": 20000
+  },
+  "usingComponents": {
+    "hello": "components/hello/hello"
   }
 }

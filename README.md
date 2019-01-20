@@ -25,6 +25,13 @@ config.js -- 一些配置变量的集合
 ### pages
 
 > 各页面集合
+> 每个page目录下新增 io.js 管理页面请求。
+> 在[页面名].js 头部添加使用
+```
+const app = getApp()
+const regeneratorRuntime = require(`${app.RUNTIME}`)
+import io from 'io.js'
+```
 
 ### utils
 

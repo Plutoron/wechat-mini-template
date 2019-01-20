@@ -10,6 +10,7 @@ Page({
     try {
       const res = await io.search({
         wd: '我是帅哥',
+        header: {}, // 想要修改的header
       })
       console.log(res)
     } catch (e) {
