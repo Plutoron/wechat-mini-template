@@ -1,5 +1,5 @@
-## mini-template
-> 初始化小程序模版
+## wechat-mini-template
+> 初始化微信小程序模版
 
 ### common
 
