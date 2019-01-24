@@ -6,7 +6,7 @@ Page({
   data: {
 
   },
-  search: async () => {
+  async search() {
     try {
       const res = await io.search({
         wd: '1111',
@@ -18,28 +18,31 @@ Page({
       })
     }
   },
-  onLoad: function (options) {
+  goToModDemo() {
+    console.log(this)
+  },
+  onLoad(options) {
 
   },
-  onReady: function () {
+  onReady() {
 
   },
-  onShow: function () {
+  onShow() {
 
   },
-  onHide: function () {
+  onHide() {
 
   },
-  onUnload: function () {
+  onUnload() {
 
   },
-  onPullDownRefresh: function () {
+  onPullDownRefresh() {
 
   },
-  onReachBottom: function () {
+  onReachBottom() {
 
   },
-  onShareAppMessage: function () {
+  onShareAppMessage() {
 
   }
 })

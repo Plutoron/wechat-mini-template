@@ -1,6 +1,7 @@
-import {
-  ioContent
-} from '../../common/io-context.js'
+const app = getApp()
+const {
+  ioContext
+} = require(`${app.ioContext}`)
 
 const io = {
   search: data => ioContent({
