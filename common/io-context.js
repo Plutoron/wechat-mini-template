@@ -5,7 +5,7 @@ import {
   https
 } from '../config/config.js'
 
-const ioContent = async ({
+const ioContext = async ({
   url,
   method = 'GET',
   data = {}
@@ -38,5 +38,5 @@ const ioContent = async ({
 }
 
 export {
-  ioContent
+  ioContext
 }
