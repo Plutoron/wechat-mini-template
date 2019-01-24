@@ -1,2 +1,5 @@
 <!--components/hello/hello.wxml-->
-<text>components/hello/hello.wxml</text>
+<view>
+  <view>点击下面按钮触发 父页面事件</view>
+  <Button type="primary" bindtap="_myClick">触发私有事件</Button>
+</view>
