@@ -1,6 +1,9 @@
 ## wechat-mini-template
 微信小程序模版
 
+### _template
+> component & page 为对应的组件和页面模版，可根据自己喜好自定义修改
+
 ### common
 
 #### common.wxss 
@@ -11,6 +14,10 @@
 
 #### io-context
 > 封装的wx.request 支持 async/await
+
+### components
+
+> 自定义组件集合，统一在app.json下注册
 
 ### config
 
