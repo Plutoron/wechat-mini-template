@@ -6,10 +6,10 @@ Page({
   data: {
 
   },
-  search: async function () {
+  async search() {
     try {
       const res = await io.search({
-        wd: '我是帅哥',
+        wd: 'something',
         header: {}, // 想要修改的header
       })
       console.log(res)
@@ -19,28 +19,28 @@ Page({
       })
     }
   },
-  onLoad: function (options) {
+  onLoad(options) {
     this.search()
   },
-  onReady: function () {
+  onReady() {
 
   },
-  onShow: function () {
+  onShow() {
 
   },
-  onHide: function () {
+  onHide() {
 
   },
-  onUnload: function () {
+  onUnload() {
 
   },
-  onPullDownRefresh: function () {
+  onPullDownRefresh() {
 
   },
-  onReachBottom: function () {
+  onReachBottom() {
 
   },
-  onShareAppMessage: function () {
+  onShareAppMessage() {
 
   }
 })
