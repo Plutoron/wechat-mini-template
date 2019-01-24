@@ -1,8 +1,8 @@
 //app.js
-import * as config from 'config/config.js'
+import config from 'config/config.js'
 
 App({
-  onLaunch: function () {
+  onLaunch() {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
