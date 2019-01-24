@@ -9,7 +9,7 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  search: async () => {
+  async search() {
     try {
       const res = await io.search({
         wd: '1111',
@@ -22,12 +22,12 @@ Page({
     }
   },
   //事件处理函数
-  bindViewTap: function () {
+  bindViewTap() {
     wx.navigateTo({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  onLoad() {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -55,7 +55,7 @@ Page({
       })
     }
   },
-  getUserInfo: function (e) {
+  getUserInfo(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
