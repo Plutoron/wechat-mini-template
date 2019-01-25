@@ -20,7 +20,7 @@ Page({
     }
   },
   onLoad(options) {
-    this.search()
+    
   },
   onReady() {
 
