@@ -2,7 +2,8 @@
   "pages": [
     "pages/intro/intro",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/mod-demo/mod-demo"
   ],
   "window": {
     "backgroundTextStyle": "light",
