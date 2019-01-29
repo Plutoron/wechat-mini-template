@@ -19,7 +19,9 @@ Page({
     }
   },
   goToModDemo() {
-    console.log(this)
+    wx.navigateTo({
+      url: '../mod-demo/mod-demo',
+    })
   },
   onLoad(options) {
 

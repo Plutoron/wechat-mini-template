@@ -22,8 +22,14 @@ Component({
    */
   methods: {
     _myClick(e) {
-      const myEventDetail = {} // detail对象，提供给事件监听函数
-      this.triggerEvent('tap', myEventDetail)
-    }
+      let {innerNum} = this.data 
+      this.setData({
+        innerNum: innerNum + 10,
+      })
+      const myEventDetail = {
+        innerNum: innerNum + 10
+      } // detail对象，提供给事件监听函数
+      this.triggerEvent('fun', myEventDetail)
+    },
   }
 })

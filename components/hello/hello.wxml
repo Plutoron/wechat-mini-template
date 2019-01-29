@@ -1,5 +1,7 @@
 <!--components/hello/hello.wxml-->
 <view>
   <view>点击下面按钮触发 父页面事件</view>
-  <Button type="primary" bindtap="_myClick">触发私有事件</Button>
+  <Button type="primary" bindtap="_myClick">触发私有事件 innerNum + 10</Button>
+  <view>hello 组件内的 number</view>
+  <view>{{innerNum}}</view>
 </view>
