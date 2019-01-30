@@ -1,0 +1,5 @@
+<view>
+  <view>一个发送请求的demo</view>
+  <view>点击button发送请求</view>
+  <button type="primary" bindtap="search">search</button>
+</view>

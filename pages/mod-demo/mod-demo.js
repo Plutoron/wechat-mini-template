@@ -30,10 +30,10 @@ Page({
   },
   outFun2(e) {
     // 获取组件实例后，可以直接获取 data 值
-    console.log('this.hello2.data', this.hello2.data)
+    console.log('this.mod2.data', this.mod2.data)
     const {
       innerNum 
-    } = this.hello2.data
+    } = this.mod2.data
     this.setData({
       outNum2: innerNum,
     })
@@ -43,8 +43,8 @@ Page({
   },
   onReady() {
     // 获取两个组件实例
-    this.hello = this.selectComponent('#hello')
-    this.hello2 = this.selectComponent('#hello2')
+    this.mod = this.selectComponent('#mod')
+    this.mod2 = this.selectComponent('#mod2')
   },
   onShow() {
 

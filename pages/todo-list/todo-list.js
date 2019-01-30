@@ -9,7 +9,8 @@ Page({
   async search() {
     try {
       const res = await io.search({
-        wd: '1111',
+        wd: 'something',
+        header: {}, // 想要修改的header
       })
       console.log(res)
     } catch (e) {
@@ -18,13 +19,8 @@ Page({
       })
     }
   },
-  goToModDemo() {
-    wx.navigateTo({
-      url: '../mod-demo/mod-demo',
-    })
-  },
   onLoad(options) {
-
+    
   },
   onReady() {
 

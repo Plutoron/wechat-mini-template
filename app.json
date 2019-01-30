@@ -1,8 +1,6 @@
 {
   "pages": [
-    "pages/intro/intro",
-    "pages/index/index",
-    "pages/logs/logs",
+    "pages/todo-list/todo-list",
     "pages/mod-demo/mod-demo"
   ],
   "window": {
@@ -14,12 +12,12 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/intro/intro",
-        "text": "欢迎页"
+        "pagePath": "pages/todo-list/todo-list",
+        "text": "todoList"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "pagePath": "pages/mod-demo/mod-demo",
+        "text": "自定义组件demo"
       }
     ]
   },
@@ -30,6 +28,6 @@
     "downloadFile": 20000
   },
   "usingComponents": {
-    "hello": "components/hello/hello"
+    "mod": "components/mod/mod"
   }
 }
