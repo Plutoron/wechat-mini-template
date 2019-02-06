@@ -694,15 +694,15 @@
   position: absolute;
 }
 
-.fac {
+.tac {
   text-align: center;
 }
 
-.fal {
+.tal {
   text-align: left;
 }
 
-.far {
+.tar {
   text-align: right;
 }
 
@@ -738,4 +738,8 @@ fl {
 
 .omit3 {
   -webkit-line-clamp: 3;
+}
+
+view {
+  box-sizing: border-box;
 }

@@ -1,5 +1,79 @@
-<view>
-  <view>一个发送请求的demo</view>
-  <view>点击button发送请求</view>
-  <button type="primary" bindtap="search">search</button>
+<view class="page p30" bindtap="bindpage">
+  <view class="header tac">Todo List</view>
+  
+  <view class="mt30 mb30">
+    <add-todo-input 
+      bindconfirm="addTodo"
+    />
+  </view>
+
+  <view>
+    <view class="block">
+      <view class="title mb20">Todo</view>
+
+      <view 
+        wx:for="{{todoList}}" 
+        wx:key="{{item.text}}"
+        class="item todo mb20 FBH FBJB {{item.text === curText ? 'checked' : ''}}"
+        bindtouchstart="bindtouchstart"
+        bindtouchmove="bindtouchmove"
+        data-text="{{item.text}}"
+      >
+        <text>{{item.text}}</text>
+        <view class="btn-group FBH">
+          <button 
+            type="primary" 
+            class="btn done-btn"
+            bindtap="bindstatus"
+            data-text="{{item.text}}"
+          >DONE</button>
+          <button 
+            type="warn" 
+            class="btn del-btn"
+            bindtap="binddel"
+            data-text="{{item.text}}"
+          >DEL</button>
+        </view>
+      </view>
+
+      <view 
+        wx:if="{{todoList.length === 0}}"
+        class="mb20"
+      >there is noting yet QAQ</view>
+    </view>
+    <view class="block">
+      <view class="title mb20">Done</view>
+
+      <view 
+        wx:for="{{doneList}}" 
+        wx:key="{{item.text}}"
+        class="item done mb20 FBH FBJB {{item.text === curText ? 'checked' : ''}}"
+        bindtouchstart="bindtouchstart"
+        bindtouchmove="bindtouchmove"
+        data-text="{{item.text}}"
+      > 
+        <text>{{item.text}}</text>
+        <view class="btn-group FBH">
+          <button 
+            type="primary" 
+            class="btn todo-btn"
+            bindtap="bindstatus"
+            data-text="{{item.text}}"
+          >TODO</button>
+          <button 
+            type="warn" 
+            class="btn del-btn"
+            bindtap="binddel"
+            data-text="{{item.text}}"
+          >DEL</button>
+        </view>
+      </view>
+    </view>
+
+    <view 
+      wx:if="{{doneList.length === 0}}"
+      class="mb20"
+      
+    >there is noting yet QAQ</view>
+  </view>
 </view>
