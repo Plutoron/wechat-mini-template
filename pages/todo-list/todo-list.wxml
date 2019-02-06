@@ -41,6 +41,7 @@
         class="mb20"
       >there is noting yet QAQ</view>
     </view>
+
     <view class="block">
       <view class="title mb20">Done</view>
 
@@ -73,7 +74,10 @@
     <view 
       wx:if="{{doneList.length === 0}}"
       class="mb20"
-      
     >there is noting yet QAQ</view>
+  </view>
+
+  <view>
+    {{app ? app : '111'}}
   </view>
 </view>

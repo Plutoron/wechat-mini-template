@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "mod-demo"
+  "navigationBarTitleText": "mod-demo",
+  "usingComponents": {
+    "mod": "/components/mod/mod"
+  }
 }

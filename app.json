@@ -28,7 +28,6 @@
     "downloadFile": 20000
   },
   "usingComponents": {
-    "mod": "components/mod/mod",
     "add-todo-input": "components/add-todo-input/add-todo-input"
   }
 }

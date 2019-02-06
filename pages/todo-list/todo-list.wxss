@@ -40,7 +40,7 @@ page{
   right: -260rpx;
   transition: all .4s ease-in-out;
 }
-
+  
 .item .btn-group .todo-btn,
 .item .btn-group .done-btn{
   border-top-right-radius: 0;
