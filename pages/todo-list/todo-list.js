@@ -1,6 +1,9 @@
 const app = getApp()
 const regeneratorRuntime = require(`${app.RUNTIME}`)
-import io from 'io.js'
+const {
+  formatNumber,
+} = require(`${app.utils}`)
+import io from 'io'
 
 Page({
   data: {
@@ -11,8 +14,16 @@ Page({
     doneList: [],
     curText: '',
   },
-  onLoad(options) {
+  async onLoad(options) {
     this.splitList()
+    console.log(formatNumber(9))
+    try {
+      await io.search({
+        wd: '2222',
+      })
+    } catch(e) {
+      console.log('e' ,e)
+    }
   },
   addTodo(e) {
     const {

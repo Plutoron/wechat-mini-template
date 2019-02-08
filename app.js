@@ -1,5 +1,5 @@
 //app.js
-import config from 'config/config.js'
+import config from 'config/config'
 
 App({
   onLaunch() {
@@ -38,5 +38,5 @@ App({
   globalData: {
     userInfo: null
   },
-  ...config
+  ...config,
 })

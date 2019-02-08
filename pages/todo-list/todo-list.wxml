@@ -76,8 +76,4 @@
       class="mb20"
     >there is noting yet QAQ</view>
   </view>
-
-  <view>
-    {{app ? app : '111'}}
-  </view>
 </view>

@@ -1,5 +1,8 @@
 const app = getApp()
 const regeneratorRuntime = require(`${app.RUNTIME}`)
+const {
+  formatNumber,
+} = require(`${app.utils}`)
 import io from 'io.js'
 
 Page({
@@ -10,7 +13,6 @@ Page({
     try {
       const res = await io.search({
         wd: 'something',
-        header: {}, // 想要修改的header
       })
       console.log(res)
     } catch (e) {

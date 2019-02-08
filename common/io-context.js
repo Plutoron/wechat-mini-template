@@ -1,28 +1,30 @@
-import regeneratorRuntime from '../libs/runtime.js'
-import {
+import regeneratorRuntime from '../libs/runtime'
+import config from '../config/config'
+const {
   prefix,
   mode,
   https
-} from '../config/config.js'
+} = config
 
 const ioContext = async ({
   url,
+  header = {},
   method = 'GET',
+  dataType = 'json',
   data = {}
 }) => {
   // 所有的请求，header默认携带token
-  const header = {
-    'Content-Type': 'application/json',
-    token: wx.getStorageSync('token') || '',
-    ...data.header,
-  }
-
   const res = await new Promise((resolve, reject) => {
     wx.request({
       url: `${https ? 'https' : 'http'}://${prefix[mode]}/${url}`,
+      header: {
+        "Content-Type": "application/json",
+        token: wx.getStorageSync('token') || '',
+        ...header,
+      },
       method,
       data,
-      header,
+      dataType,
       success: (res) => {
         resolve(res.data)
       },

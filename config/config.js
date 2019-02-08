@@ -15,6 +15,4 @@ const config = {
   https: true,
 }
 
-module.exports = {
-  ...config
-}
+export default config
