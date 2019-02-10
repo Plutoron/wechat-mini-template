@@ -20,7 +20,7 @@ Page({
       })
     }
   },
-  outFun(e) {
+  outFun1(e) {
     // 通过 自定义detail 传参
     console.log('e.detail', e.detail)
     const {innerNum} = e.detail
@@ -43,7 +43,7 @@ Page({
   },
   onReady() {
     // 获取两个组件实例
-    this.mod = this.selectComponent('#mod')
+    this.mod1 = this.selectComponent('#mod1')
     this.mod2 = this.selectComponent('#mod2')
   },
   onShow() {

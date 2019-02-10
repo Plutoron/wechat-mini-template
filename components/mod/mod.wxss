@@ -1,1 +1,8 @@
 /* components/hello/hello.wxss */
+@import "/common/common.wxss";
+@import "/common/flex.wxss";
+
+button{
+  width: 300rpx;
+  margin: 0;
+}
