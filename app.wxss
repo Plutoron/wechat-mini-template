@@ -2,6 +2,10 @@
 @import "common/common.wxss";
 @import "common/flex.wxss";
 
+view {
+  box-sizing: border-box;
+}
+
 .container {
   height: 100%;
   display: flex;

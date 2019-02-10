@@ -739,7 +739,3 @@ fl {
 .omit3 {
   -webkit-line-clamp: 3;
 }
-
-view {
-  box-sizing: border-box;
-}
