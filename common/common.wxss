@@ -2,30 +2,6 @@
   font-size: 0;
 }
 
-.fs12 {
-  font-size: 12rpx;
-}
-
-.fs14 {
-  font-size: 14rpx;
-}
-
-.fs16 {
-  font-size: 16rpx;
-}
-
-.fs18 {
-  font-size: 18rpx;
-}
-
-.fs20 {
-  font-size: 20rpx;
-}
-
-.fs22 {
-  font-size: 22rpx;
-}
-
 .fs24 {
   font-size: 24rpx;
 }
@@ -40,6 +16,26 @@
 
 .fs30 {
   font-size: 30rpx;
+}
+
+.fs32 {
+  font-size: 32rpx;
+}
+
+.fs34 {
+  font-size: 34rpx;
+}
+
+.fs36 {
+  font-size: 36rpx;
+}
+
+.fs38 {
+  font-size: 38rpx;
+}
+
+.fs40 {
+  font-size: 40rpx;
 }
 
 .p0 {
@@ -682,10 +678,6 @@
   margin-left: 30rpx;
 }
 
-.bold {
-  font-weight: 700;
-}
-
 .pr {
   position: relative;
 }
@@ -710,7 +702,7 @@
   display: none;
 }
 
-fl {
+.fl {
   float: left;
 }
 
