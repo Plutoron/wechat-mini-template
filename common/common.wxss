@@ -734,11 +734,11 @@
   font-weight: 700;
 }
 
-.pr {
+.PR {
   position: relative;
 }
 
-.pa {
+.PA {
   position: absolute;
 }
 
@@ -787,3 +787,21 @@
 .omit3 {
   -webkit-line-clamp: 3;
 }
+
+.BGF{
+  background-color: #fff;
+}
+
+.DPB{
+	display: block;
+}
+
+.DPIB{
+	display: inline-block;
+}
+
+.DPIF{
+	display: inline-flex;
+}
+
+
