@@ -1,5 +1,5 @@
 Component({
-  options: {
+	options: {
 		addGlobalClass: true,
 		multipleSlots: true,
 	},
@@ -8,6 +8,7 @@ Component({
   data: {}, 
   attached() {},
   ready() {},
+  moved() {},
   detached() {},
   methods: {}
 })
