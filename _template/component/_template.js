@@ -4,6 +4,7 @@ Component({
 		multipleSlots: true,
 	},
   behaviors: [],
+	observers: {},
   properties: {},
   data: {}, 
   attached() {},

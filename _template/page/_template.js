@@ -14,14 +14,10 @@ Page({
       })
       console.log(res)
     } catch (e) {
-      wx.showToast({
-        title: e.errMsg,
-      })
+      app.error(e)
     }
   },
-  onLoad(options) {
-    console.log(formatNumber(9))
-  },
+  onLoad(options) {},
   onReady() {},
   onShow() {},
   onHide() {},
