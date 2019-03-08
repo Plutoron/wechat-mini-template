@@ -1,7 +1,6 @@
 {
   "pages": [
-    "pages/todo-list/todo-list",
-    "pages/mod-demo/mod-demo"
+    "pages/todo-list/todo-list"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -10,16 +9,7 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "list": [
-      {
-        "pagePath": "pages/todo-list/todo-list",
-        "text": "todoList"
-      },
-      {
-        "pagePath": "pages/mod-demo/mod-demo",
-        "text": "自定义组件demo"
-      }
-    ]
+    "list": []
   },
   "networkTimeout": {
     "request": 20000,
