@@ -804,4 +804,45 @@
 	display: inline-flex;
 }
 
+.OFH{
+	overflow: hidden;
+}
 
+.fixed-full-screen{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.fixed-top{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.fixed-bottom{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.w100{
+	width: 100%;
+}
+
+.h100{
+	height: 100%;
+}
+
+.fw200{
+	font-weight: 200;
+}
+
+.twrap{
+	word-wrap: break-word;
+  word-break: break-all;
+}
