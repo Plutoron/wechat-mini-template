@@ -36,7 +36,7 @@ App({
     })
   },
   // 全局的报错
-  error(err) {
+  message(err) {
 		wx.showToast({
 			title: err || '好像哪里出问题了',
 			icon: 'none',

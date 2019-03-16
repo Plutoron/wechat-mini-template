@@ -14,7 +14,7 @@ Page({
       })
       console.log(res)
     } catch (e) {
-      app.error(e)
+      app.message(e)
     }
   },
   onLoad(options) {},
