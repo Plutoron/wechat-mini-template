@@ -14,17 +14,6 @@ Page({
     doneList: [],
     curText: '',
   },
-  async onLoad(options) {
-    this.splitList()
-    console.log(formatNumber(9))
-    try {
-      await io.search({
-        wd: '2222',
-      })
-    } catch(e) {
-      console.log('e' ,e)
-    }
-  },
   addTodo(e) {
     const {
       todo,
@@ -106,19 +95,6 @@ Page({
       todoList: this.data.list.filter(v => !v.completed),
       doneList: this.data.list.filter(v => v.completed),
     })
-  },
-  async search() {
-    try {
-      const res = await io.search({
-        wd: 'something',
-        header: {}, // 想要修改的header
-      })
-      console.log(res)
-    } catch (e) {
-      wx.showToast({
-        title: e.errMsg,
-      })
-    }
   },
   bindtouchstart(e) {
     const {
