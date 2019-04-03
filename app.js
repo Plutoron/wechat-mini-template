@@ -35,10 +35,11 @@ App({
       }
     })
   },
-  // 全局的报错
-  message(err) {
+  // 全局的提示
+  message(msg) {
+		console.log('message', msg)
 		wx.showToast({
-			title: err || '好像哪里出问题了',
+			title: msg ? (msg.message || msg) : '好像哪里出问题了',
 			icon: 'none',
 		})
 	},
