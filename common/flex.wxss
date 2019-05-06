@@ -39,10 +39,6 @@
   justify-content: flex-end;
 }
 
-.FBJ {
-  justify-content: space-between;
-}
-
 .FBJB {
   justify-content: space-between;
 }
