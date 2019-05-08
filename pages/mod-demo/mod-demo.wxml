@@ -3,11 +3,11 @@
   <view>我们先在 app.json 中把mod组件注册为全局组件，就可以在任何页面直接引用</view>
   <view class="mt20 mb20">下面的例子，介绍获取组件内值的两种方式</view>
   <view>-------------------------------</view>
-  <view class="mt20 mb20">下面是 id 为 mod1 的 mod组件</view>
+  <view class="mt20 mb20">下面是 id 为 mod1 的 mod组件，通过 自定义detail 传参</view>
   <mod id="mod1" bindfun="outFun1" />
   <view>mode-demo 获取到的值：{{outNum}}</view>
   <view>-------------------------------</view>
-  <view class='mt20 mb20'>下面是 id 为 mod2 的 mod组件</view>
+  <view class='mt20 mb20'>下面是 id 为 mod2 的 mod组件，获取组件实例后，可以直接获取 data 值</view>
   <mod id="mod2" bindfun="outFun2" />
   <view>mode-demo 获取到的值: {{outNum2}}</view>
 </view>
