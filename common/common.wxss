@@ -777,15 +777,15 @@
   -webkit-line-clamp: 2;
 }
 
+.omit3 {
+  -webkit-line-clamp: 3;
+}
+
 .omit2,
 .omit3 {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-}
-
-.omit3 {
-  -webkit-line-clamp: 3;
 }
 
 .BGF{
@@ -842,7 +842,11 @@
 	font-weight: 200;
 }
 
-.twrap{
+.t-wrap{
 	word-wrap: break-word;
   word-break: break-all;
+}
+
+.t-no-wrap{
+	white-space: nowrap;
 }

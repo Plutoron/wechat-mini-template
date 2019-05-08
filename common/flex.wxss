@@ -132,5 +132,9 @@
 }
 
 .FBW {
-  flex-wrap: wrap
+  flex-wrap: wrap;
+}
+
+.FB-NO-W {
+  flex-wrap: nowrap;
 }
