@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/todo-list/todo-list"
+    "pages/todo-list/todo-list",
+		"pages/mod-demo/mod-demo"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -8,6 +9,25 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
+	"tabBar": {
+		"borderStyle": "white",
+		"color": "#7F8389",
+		"selectedColor": "#0054DC",
+		"list": [
+			{
+				"pagePath": "pages/todo-list/todo-list",
+				"text": "todo-list",
+				"iconPath": "images/xxx.png",
+				"selectedIconPath": "images/xxx.png"
+			},
+			{
+				"pagePath": "pages/mod-demo/mod-demo",
+				"text": "mod-demo",
+				"iconPath": "images/xxx.png",
+				"selectedIconPath": "images/xxx.png"
+			}
+		]
+	},
   "networkTimeout": {
     "request": 20000,
     "connectSocket": 20000,
