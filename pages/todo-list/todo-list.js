@@ -14,6 +14,15 @@ Page({
     doneList: [],
     curText: '',
   },
+	onLoad() {
+		this.splitList()
+	},
+	splitList() {
+		this.setData({
+			todoList: this.data.list.filter(v => !v.completed),
+			doneList: this.data.list.filter(v => v.completed),
+		})
+	},
   addTodo(e) {
     const {
       todo,
@@ -88,12 +97,6 @@ Page({
       list,
     }, () => {
       this.splitList()
-    })
-  },
-  splitList() {
-    this.setData({
-      todoList: this.data.list.filter(v => !v.completed),
-      doneList: this.data.list.filter(v => v.completed),
     })
   },
   bindtouchstart(e) {
