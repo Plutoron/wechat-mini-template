@@ -1,25 +1,17 @@
-// components/hello/hello.js
 Component({
-  /**
-   * 组件的属性列表
-   */
+	options: {
+		addGlobalClass: true,
+		multipleSlots: true,
+	},
   properties: {
     outerNum: {
       type: Number,
       value: 5,
     }
   },
-
-  /**
-   * 组件的初始数据
-   */
   data: {
     innerNum: 666
   },
-
-  /**
-   * 组件的方法列表
-   */
   methods: {
     _myClick(e) {
       let {innerNum} = this.data 
