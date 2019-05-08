@@ -33,13 +33,13 @@ const ioContext = async ({
 		}
 	}
 
-  // 所有的请求，header默认携带token
   const res = await new Promise((resolve, reject) => {
     wx.request({
       url: `${https ? 'https' : 'http'}://${prefix[mode]}/${url}${restful ? '/' + restParam.join('/') : ''}`,
       header: {
         "Content-Type": "application/json",
-        token: wx.getStorageSync('token') || '',
+        // 所有的请求，header默认携带token
+        // token: wx.getStorageSync('token') || '',
         ...header,
       },
       method,
