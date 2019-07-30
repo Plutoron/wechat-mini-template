@@ -64,3 +64,7 @@ page{
   color: cornflowerblue;
   text-decoration: line-through;
 }
+
+.maxW90{
+	max-width: 90%;
+}

@@ -734,11 +734,11 @@
   font-weight: 700;
 }
 
-.PR {
+.pr {
   position: relative;
 }
 
-.PA {
+.pa {
   position: absolute;
 }
 
@@ -769,8 +769,11 @@
 .omit {
   overflow: hidden;
   text-overflow: ellipsis;
-  word-break: keep-all;
-  white-space: nowrap;
+ 	word-break: break-all;
+  white-space: pre-wrap;
+	display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .omit2 {
@@ -781,31 +784,44 @@
   -webkit-line-clamp: 3;
 }
 
-.omit2,
-.omit3 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-}
-
-.BGF{
+.bgf{
   background-color: #fff;
 }
 
-.DPB{
+.block{
 	display: block;
 }
 
-.DPIB{
+.inline-block{
 	display: inline-block;
 }
 
-.DPIF{
+.inline-flex{
 	display: inline-flex;
 }
 
-.OFH{
+.of-hidden{
 	overflow: hidden;
+}
+
+.ofx-hidden{
+	overflow-x: hidden;
+}
+
+.ofy-hidden{
+	overflow-y: hidden;
+}
+
+.of-auto{
+	overflow: auto;
+}
+
+.ofx-auto{
+	overflow-x: auto;
+}
+
+.ofy-auto{
+	overflow-y: auto;
 }
 
 .fixed-full-screen{

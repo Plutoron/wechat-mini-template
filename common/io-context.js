@@ -14,7 +14,6 @@ const ioContext = async ({
   data = {},
   originRes = false,
 }) => {
-
   // restful 接口  参数 ':xxx' 的形式传入data
   let restful 
 
@@ -22,6 +21,7 @@ const ioContext = async ({
 	const restParam = []
 
 	if (dataKeys.length > 0) {
+		// 根据 参数对象 key 是否 包含 ： 判断是否为 restful 参数
 		if (dataKeys.some(v => v.indexOf(':') > -1)) {
 			restful = true
 			dataKeys.map((v, i) => {
@@ -46,9 +46,14 @@ const ioContext = async ({
       data,
       dataType,
       success: (res) => {
-        resolve(res.data)
+				if (originRes) {
+					resolve(res)
+				} else {
+					resolve(res.data)
+				}
         
-        // 在这里进行统一的 返回处理
+        // 在这里进行统一的 返回处理 
+				// demo: 
         // if (res.data.success) {
 				// 	if (originRes) {
 				// 		resolve(res)

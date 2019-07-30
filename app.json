@@ -1,14 +1,14 @@
 {
-  "pages": [
-    "pages/todo-list/todo-list",
+	"pages": [
+		"pages/todo-list/todo-list",
 		"pages/mod-demo/mod-demo"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
-  },
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "WeChat",
+		"navigationBarTextStyle": "black"
+	},
 	"tabBar": {
 		"borderStyle": "white",
 		"color": "#7F8389",
@@ -28,14 +28,15 @@
 			}
 		]
 	},
-  "networkTimeout": {
-    "request": 20000,
-    "connectSocket": 20000,
-    "uploadFile": 20000,
-    "downloadFile": 20000
-  },
-  "usingComponents": {
-    "add-todo-input": "components/add-todo-input/add-todo-input",
-    "mod": "components/mod/mod"
-  }
+	"networkTimeout": {
+		"request": 20000,
+		"connectSocket": 20000,
+		"uploadFile": 20000,
+		"downloadFile": 20000
+	},
+	"usingComponents": {
+		"add-todo-input": "components/add-todo-input/add-todo-input",
+		"mod": "components/mod/mod"
+	},
+	"sitemapLocation": "sitemap.json"
 }
