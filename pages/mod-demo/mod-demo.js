@@ -1,5 +1,4 @@
 const app = getApp()
-const regeneratorRuntime = require(`${app.RUNTIME}`)
 import io from 'io.js'
 
 Page({

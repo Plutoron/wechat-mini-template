@@ -1,5 +1,6 @@
 /**app.wxss**/
 @import "common/common.wxss";
+@import "common/util.wxss";
 @import "common/flex.wxss";
 
 view {
@@ -14,4 +15,17 @@ view {
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
+}
+
+/* 按钮的 外部样式reset*/
+.share-btn {
+  border: none !important;
+  padding: 0;
+	margin: 0;
+	background-color: transparent;
+}
+
+.share-btn::after{
+  border: none;
+  content: unset;
 }

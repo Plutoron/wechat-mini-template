@@ -67,10 +67,6 @@ config.js -- 一些配置变量的集合
 ### images
 > 图片资源
 
-### libs
-
-> runtime.js -- 因微信小程序不支持 async/await，所以引入该库，直接 在需要用到的js 直接引入 require。本项目在各页面的js 内 require。
-
 ### pages
 
 > 各页面集合
@@ -78,7 +74,6 @@ config.js -- 一些配置变量的集合
 > 在[页面名].js 头部添加使用
 ```
 const app = getApp()
-const regeneratorRuntime = require(`${app.RUNTIME}`)
 import io from 'io.js'
 ```
 
