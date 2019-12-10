@@ -16,8 +16,6 @@ components          // 小程序自定义组件目录
 config
   --config.js       // 定义好的一些全局变量
 images              // 存放图片资源
-libs
-  --runtime.js      // 因为微信小程序不支持 async/await 引入该js
 pages               // 小程序里面包含的所有的页面都放在pages下面，一个页面一个文件夹
   --mod-demo        // 小程序页面
   --todo-list       // 小程序页面
