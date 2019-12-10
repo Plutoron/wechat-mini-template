@@ -1,4 +1,3 @@
-import regeneratorRuntime from '../libs/runtime'
 import config from '../config/config'
 const {
   prefix,
@@ -13,29 +12,29 @@ const ioContext = async ({
   dataType = 'json',
   data = {},
   originRes = false,
+  checkToken = true, // 该接口是否判断token
 }) => {
   // restful 接口  参数 ':xxx' 的形式传入data
-  let restful 
+  const dataKeys = Object.keys(data)
+  const restParam = {}
 
-	const dataKeys = Object.keys(data)
-	const restParam = []
+  if (dataKeys.length > 0) {
+    // 根据 参数对象 key 是否 包含 ： 判断是否为 restful 参数
+    if (dataKeys.some(v => v.indexOf(':') > -1)) {
+      dataKeys.map((v, i) => {
+        if (v.indexOf(':') > -1) {
+          restParam[v] = data[v]
+          delete data[v]
+        }
+      })
+    }
+  }
 
-	if (dataKeys.length > 0) {
-		// 根据 参数对象 key 是否 包含 ： 判断是否为 restful 参数
-		if (dataKeys.some(v => v.indexOf(':') > -1)) {
-			restful = true
-			dataKeys.map((v, i) => {
-				if (v.indexOf(':') > -1) {
-					restParam.push(data[v])
-					delete data[v]
-				}
-			})
-		}
-	}
+  const trueUrl = Object.keys(restParam).reduce((pre, value) => pre.replace(value, restParam[value]), url)
 
   const res = await new Promise((resolve, reject) => {
     wx.request({
-      url: `${https ? 'https' : 'http'}://${prefix[mode]}/${url}${restful ? '/' + restParam.join('/') : ''}`,
+      url: `${https ? 'https' : 'http'}://${prefix[mode]}/${trueUrl}`,
       header: {
         "Content-Type": "application/json",
         // 所有的请求，header默认携带token

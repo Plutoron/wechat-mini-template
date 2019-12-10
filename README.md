@@ -16,8 +16,6 @@ components          // 小程序自定义组件目录
 config
   --config.js       // 定义好的一些全局变量
 images              // 存放图片资源
-libs
-  --runtime.js      // 因为微信小程序不支持 async/await 引入该js
 pages               // 小程序里面包含的所有的页面都放在pages下面，一个页面一个文件夹
   --mod-demo        // 小程序页面
   --todo-list       // 小程序页面
@@ -69,10 +67,6 @@ config.js -- 一些配置变量的集合
 ### images
 > 图片资源
 
-### libs
-
-> runtime.js -- 因微信小程序不支持 async/await，所以引入该库，直接 在需要用到的js 直接引入 require。本项目在各页面的js 内 require。
-
 ### pages
 
 > 各页面集合
@@ -80,7 +74,6 @@ config.js -- 一些配置变量的集合
 > 在[页面名].js 头部添加使用
 ```
 const app = getApp()
-const regeneratorRuntime = require(`${app.RUNTIME}`)
 import io from 'io.js'
 ```
 

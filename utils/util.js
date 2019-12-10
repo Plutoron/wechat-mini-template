@@ -44,11 +44,33 @@ const getSuffix = filename => {
 
 const checkPhone = phone => new RegExp(/^[1][3,4,5,6,7,8,9][0-9]{9}$/).test(phone)
 
+const checkEmail = email => new RegExp(/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/).test(email)
+
+const getCountDownTime = timestamp => {
+  //结束时间
+  var endDate = new Date(timestamp);
+  //当前时间
+  var nowDate = new Date();
+  //相差的总秒数
+  var totalSeconds = parseInt((endDate - nowDate) / 1000);
+
+  // 小时
+  var hours = Math.floor(totalSeconds % (60 * 60));
+  //分钟
+  var minutes = Math.floor(totalSeconds % (60 * 60 * 60))
+  //秒
+  var seconds = totalSeconds % (60 * 60 * 60)
+  //输出到页面
+  return `${formatNumber(hours)}:${formatNumber(minutes)}:${formatNumber(seconds)}`
+}
+
 export {
   formatTime,
   formatNumber,
   getTimestamp,
   getRandomString,
   getSuffix,
-	checkPhone,
+  checkPhone,
+  checkEmail,
+  getCountDownTime,
 }
