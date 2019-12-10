@@ -52,7 +52,7 @@ page
 > flex布局常用的class名
 
 #### io-context
-> 封装的wx.request 支持 async/await
+> 封装的wx.request 支持 async/await 借鉴 [netty-fetch](https://www.npmjs.com/package/natty-fetch)
 
 ### components
 
