@@ -1,7 +1,6 @@
 const config = {
   ROOT: '../../',
   CONFIG: '../../config/config.js',
-  RUNTIME: '../../libs/runtime.js',
   ioContext: '../../common/io-context.js',
   utils: '../../utils/util.js',
   appid: '',

@@ -36,11 +36,14 @@ App({
     })
   },
   // 全局的提示
-  message(msg) {
+  message(msg, callback) {
 		console.log('message', msg)
 		wx.showToast({
 			title: msg ? (msg.message || msg) : '好像哪里出问题了',
-			icon: 'none',
+      icon: 'none',
+      complete: () => {
+        callback && callback()
+      },
 		})
 	},
   globalData: {
