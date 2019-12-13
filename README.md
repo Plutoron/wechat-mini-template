@@ -48,6 +48,9 @@ page
 #### common.wxss 
 > font-size/padding/margin/omit
 
+#### util.wxss 
+> 一些功能性css
+
 #### flex.wxss 
 > flex布局常用的class名
 
@@ -95,4 +98,4 @@ app.X
 
 ### app.wxss 
 
-> 小程序的全局样式。引入common.wxss 和 flex.wxss
+> 小程序的全局样式。引入common.wxss util.wxss 和 flex.wxss
