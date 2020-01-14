@@ -14,8 +14,20 @@ Page({
     curText: '',
   },
 	onLoad() {
+    // 模拟 数据 请求
+    if (app.checkTokenInvalid()) {
+      app.tokenCallback = () => this.getData()
+      app.getToken()
+    } else {
+      this.getData()
+    }
+
 		this.splitList()
-	},
+
+  },
+  getData() {
+    // 我要请求数据
+  },
 	splitList() {
 		this.setData({
 			todoList: this.data.list.filter(v => !v.completed),

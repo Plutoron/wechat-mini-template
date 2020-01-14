@@ -12,6 +12,7 @@ const config = {
     pro: 'pro.www.baidu.com',
   },
   https: true,
+  tokenTimeout: 1000 * 60 * 60 * 24 * 7, 
 }
 
 export default config

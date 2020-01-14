@@ -35,6 +35,56 @@ App({
       }
     })
   },
+  checkTokenInvalid () {
+    const tokenTimestamp = wx.getStorageSync('tokenTimestamp')
+    const token = wx.getStorageSync('token')
+    const curTimestamp = new Date().valueOf()
+
+    return token && curTimestamp - tokenTimestamp > config.tokenTimeout - 1000 * 60 * 60 * 24
+  },
+  onShow () {
+    // 判断token 是否存在
+    const token = wx.getStorageSync('token')
+
+    if (token) {
+      // 判断 token 是否过期 提前一天 刷新token
+      if (this.checkTokenInvalid()) {
+        this.getToken()
+      }
+    } else {
+      this.getToken()
+    }
+  },
+  getToken() {
+    wx.login({
+      success: async res => {
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        const code = res.code
+
+        try {
+          const res = await io.getToken({
+            code,
+          })
+          if (res) {
+            try {
+              wx.setStorageSync('token', res.token)
+              wx.setStorageSync('tokenTimestamp', new Date().valueOf())
+
+              if(this.tokenCallback) {
+                this.tokenCallback()
+                this.tokenCallback = null
+              }
+              
+            } catch (e) {
+              this.message(e)
+            }
+          }
+        } catch (e) {
+          this.message(e)
+        }
+      }
+    })
+  },
   // 全局的提示
   message(msg, callback) {
 		console.log('message', msg)
