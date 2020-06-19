@@ -5,7 +5,7 @@ const {
   https
 } = config
 
-const ioContext = async ({
+export const ioContext = async ({
   url,
   header = {},
   method = 'GET',
@@ -73,5 +73,3 @@ const ioContext = async ({
   })
   return res
 }
-
-export ioContext
