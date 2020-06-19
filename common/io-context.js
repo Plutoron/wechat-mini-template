@@ -74,6 +74,4 @@ const ioContext = async ({
   return res
 }
 
-export {
-  ioContext
-}
+export ioContext
